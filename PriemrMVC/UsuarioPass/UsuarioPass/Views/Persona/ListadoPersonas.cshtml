@@ -1,0 +1,71 @@
+﻿@model IEnumerable<UsuarioPass.Models.Persona>
+@{
+    ViewBag.Title = "Listado de Personas";
+}
+
+<div class="row">
+    <div class="col-sm-2">
+        <div>
+            <h4>Listado de personas cargadas en BD</h4>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-lg-6">
+           <table class="table table-bordered table-striped">
+               <thead>
+                   <tr>
+                       <th class="text-center">
+                           ID
+                       </th>
+                       <th class="text-center">
+                           Nombre
+                       </th>
+                       <th class="text-center">
+                           Apellido
+                       </th>
+                       <th class="text-center">
+                           Teléfono
+                       </th>
+                       <th class="text-center">
+                           Edad
+                       </th>
+                       <th class="text-center">
+                           Acciones
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   @foreach(var persona in Model)
+                   {
+                   <tr class="text-center">
+                       <td>
+                           @persona.Id
+                       </td>
+                       <td>
+                           @persona.Nombre
+                       </td>
+                       <td>
+                           @persona.Apellido
+                       </td>
+                       <td>
+                           @persona.Telefono
+                       </td>
+                       <td>
+                           @persona.Edad
+                       </td>
+                       <td>
+
+                       </td>
+                   </tr>
+                   }
+               </tbody>
+           </table>
+        </div>
+    </div>
+
+
+
